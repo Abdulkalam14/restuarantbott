@@ -1,0 +1,48 @@
+version: "3.1"
+
+nlu:
+- synonym: pizza
+  examples: |
+    - pizzaa
+    - piza
+    - pizzas
+- synonym: sushi
+  examples: |
+    - sushis
+    - sushii
+    - nigirii
+    - sushi maki
+    - urumaki
+    - futomaki
+- synonym: hamburger
+  examples: |
+    - burger
+    - sandwich
+    - cheseeburger  
+  
+- intent: booking_table
+  examples: |
+    - i would like to booking seat
+    - i want to reserve a table
+    - book place
+    - book table
+- intent: inform_dishes
+  examples: |
+    - i would like a [soup](dishes)
+    - i want a [pizza](dishes)
+    - [sushi](dishes)
+    - [hamburger](dishes) please
+    - can i get a [cola](dishes)
+    - [kebab](dishes), [soup](dishes)
+    - [pizza](dishes) and [sushi](dishes)
+    - [hamburger](dishes), [cola](dishes) and [kebab](dishes)
+    - [pizza](dishes) [soup](dishes) and [sushi](dishes)
+- intent: inform_num_people
+  examples: |
+    - i need [1](num_people)
+    - i need [2](num_people)
+    - i need [3](num_people)
+    - i need [4](num_people)
+    - i need [5](num_people)
+    - i need [6](num_people)
+    - [12](num_people)

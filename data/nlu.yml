@@ -1,0 +1,99 @@
+version: "3.1"
+nlu:
+- intent: greet
+  examples: |
+    - hey
+    - hello
+    - hi
+    - hello there
+    - good morning
+    - good evening
+    - moin
+    - hey there
+    - let's go
+    - hey dude
+    - goodmorning
+    - goodevening
+    - good afternoon
+- intent: goodbye
+  examples: |
+    - cu
+    - good by
+    - cee you later
+    - good night
+    - bye
+    - goodbye
+    - have a nice day
+    - see you around
+    - bye bye
+    - see you later
+- intent: affirm
+  examples: |
+    - yes
+    - y
+    - indeed
+    - of course
+    - that sounds good
+    - correct
+    - sure
+    - ok
+- intent: deny
+  examples: |
+    - no
+    - n
+    - never
+    - I don't think so
+    - don't like that
+    - no way
+    - not really
+- intent: work_hours
+  examples: |
+    - what are your working hours?
+    - when you start work?
+    - when you finish work
+    - when you end work?
+- intent: give_time
+  examples: |
+    - can you tell me what time is it
+    - tell me the time
+    - what time is it
+    - give time
+- intent: name_entry
+  examples: |
+    - my name is [Pawel](name)
+    - my name is [Pawel sokolowski](name)
+    - i am [Michal](name)
+    - i am [Michal kowalski](name)
+- intent: inform_task
+  examples: |
+    - [rent hall]{"entity": "task", "value": "hall_renting"}
+    - [rent]{"entity": "task", "value": "hall_renting"}
+    - [make party]{"entity": "task", "value": "hall_renting"}
+    - [rent hall]{"entity": "task", "value": "hall_renting"} for a [wedding](reason)
+    - [rent]{"entity": "task", "value": "hall_renting"} [wedding](reason) hall
+    - make [birthday](reason) [party]{"entity": "task", "value": "hall_renting"}
+    - [cancel]{"entity": "task", "value": "cancellation_hall_renting"}
+    - [cancellation]{"entity": "task", "value": "cancellation_hall_renting"}
+    - [canceling]{"entity": "task", "value": "cancellation_hall_renting"}
+    - [cancel]{"entity": "task", "value": "cancellation_hall_renting"} party
+    - [cancellation]{"entity": "task", "value": "cancellation_hall_renting"} [wedding](reason)
+    - [canceling]{"entity": "task", "value": "cancellation_hall_renting"} [birthday](reason)
+    - [canceling]{"entity": "task", "value": "cancellation_hall_renting"} [baptism](reason)
+    - [catering]{"entity": "task", "value": "daily_catering"}
+    - [daily catering]{"entity": "task", "value": "daily_catering"}
+    - [rent hall]{"entity": "task", "value": "hall_renting"}
+- synonym: hall_renting
+  examples: |
+    - rent hall
+    - rent
+    - make party
+    - party
+- synonym: cancellation_hall_renting
+  examples: |
+    - cancel
+    - cancellation
+    - canceling
+- synonym: daily_catering
+  examples: |
+    - catering
+    - daily catering
